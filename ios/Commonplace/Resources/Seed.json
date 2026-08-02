@@ -1,0 +1,724 @@
+{
+  "bookmarks": [
+    {
+      "id": 1,
+      "author": "Nadia Kell",
+      "handle": "@nadiakell",
+      "date": "26 Jul",
+      "tags": [
+        "Business",
+        "Leverage"
+      ],
+      "title": "Permissionless leverage is still unclaimed.",
+      "summary": "Code and media are the only two forms of leverage that never required permission, and they compound while you sleep. The scarce input is not capital — it is a clear point of view, repeated in public long enough to become trusted.",
+      "concepts": [
+        "Permissionless leverage",
+        "Reputation compounds like capital"
+      ],
+      "actions": [
+        "Pick one narrow claim and repeat it for twelve months",
+        "Ship artefacts, not opinions"
+      ],
+      "original": "Capital and labour are permissioned. Code and media are not.\n\nMost people spend a decade asking for permission to use the two forms of leverage that never required it. The asymmetry is absurd, and it is still open.",
+      "likes": "4.1K",
+      "reposts": "612",
+      "reviewed": true,
+      "core": true,
+      "note": ""
+    },
+    {
+      "id": 2,
+      "author": "Ivo Marchetti",
+      "handle": "@ivomarch",
+      "date": "25 Jul",
+      "tags": [
+        "Pricing",
+        "Business"
+      ],
+      "title": "Price is positioning, not arithmetic.",
+      "summary": "Raising price changes who shows up, what they expect, and how much support they need — usually in your favour. Treating pricing as a spreadsheet output instead of a statement about who the product is for is the actual error.",
+      "concepts": [
+        "Price as positioning",
+        "Willingness to pay is a segment, not a number"
+      ],
+      "actions": [
+        "Raise price 30% for new customers only; watch win-rate, not revenue",
+        "Name the customer you're deliberately pricing out"
+      ],
+      "original": "You don't have a pricing problem, you have a 'who is this for' problem.\n\nEvery time I've doubled price the customers got easier, not harder. The bad-fit buyers were generating 80% of the tickets.",
+      "likes": "8.9K",
+      "reposts": "1.2K",
+      "reviewed": false,
+      "core": true,
+      "note": ""
+    },
+    {
+      "id": 3,
+      "author": "Amara Osei",
+      "handle": "@amaraosei",
+      "date": "24 Jul",
+      "tags": [
+        "Health",
+        "Sleep"
+      ],
+      "title": "Sleep consistency beats sleep duration.",
+      "summary": "A fixed wake time anchors circadian rhythm more powerfully than total hours in bed, and morning light does more than any supplement on the shelf. Almost every other sleep intervention is downstream of those two.",
+      "concepts": [
+        "Circadian anchoring",
+        "Light as the primary zeitgeber"
+      ],
+      "actions": [
+        "Fix the wake time and let bedtime drift",
+        "Ten minutes of outdoor light before caffeine"
+      ],
+      "original": "The highest-leverage sleep intervention is not a supplement, a mattress, or an app. It is waking up at the same time every day, weekends included, for three weeks.\n\nEverything else is downstream of that.",
+      "likes": "12.4K",
+      "reposts": "2.1K",
+      "reviewed": true,
+      "core": false,
+      "note": ""
+    },
+    {
+      "id": 4,
+      "author": "Ben Sørensen",
+      "handle": "@bsorensen",
+      "date": "22 Jul",
+      "tags": [
+        "Writing",
+        "Career"
+      ],
+      "title": "Writing in public is a search function.",
+      "summary": "The point of publishing is not reach but precision: a post read by four hundred of the right people outperforms one read by forty thousand strangers. Write the thing that would make the people you admire email you first.",
+      "concepts": [
+        "Writing as a filter",
+        "Precision over audience size"
+      ],
+      "actions": [
+        "Write the post only you could have written",
+        "Optimise for replies, not impressions"
+      ],
+      "original": "Stop asking how to grow an audience. Ask what you'd need to publish for the five people you most want to work with to email you first.\n\nThat post is usually specific, slightly risky, and short.",
+      "likes": "3.3K",
+      "reposts": "448",
+      "reviewed": false,
+      "core": false,
+      "note": ""
+    },
+    {
+      "id": 5,
+      "author": "Priya Raghunathan",
+      "handle": "@praghu",
+      "date": "21 Jul",
+      "tags": [
+        "Psychology",
+        "Decisions"
+      ],
+      "title": "Sort decisions by reversibility before difficulty.",
+      "summary": "Most bad decisions can be undone, and most people treat them as if they cannot. Filtering choices by whether they are two-way doors removes the majority of deliberation before it starts.",
+      "concepts": [
+        "Two-way doors",
+        "Reversibility as the first filter"
+      ],
+      "actions": [
+        "Ask 'can I undo this in a week?' before analysing anything",
+        "Spend deliberation budget only on one-way doors"
+      ],
+      "original": "Before you decide whether a decision is right, decide whether it is reversible.\n\nYou'll find 90% of what you agonise over is a two-way door you could walk back through this afternoon.",
+      "likes": "6.7K",
+      "reposts": "990",
+      "reviewed": true,
+      "core": false,
+      "note": ""
+    },
+    {
+      "id": 6,
+      "author": "Tomas Weiland",
+      "handle": "@tweiland",
+      "date": "19 Jul",
+      "tags": [
+        "Tools",
+        "Attention"
+      ],
+      "title": "The cost of interruption is not the interruption.",
+      "summary": "Attention residue means task-switching degrades the next twenty minutes, not the thirty seconds you spent switching. Batching is not about efficiency — it is about protecting the depth of a single context.",
+      "concepts": [
+        "Attention residue",
+        "Context as a scarce resource"
+      ],
+      "actions": [
+        "Batch all shallow work into one window",
+        "Write the next step down before you switch away"
+      ],
+      "original": "You don't lose 30 seconds when you check Slack mid-task. You lose the next 20 minutes of depth.\n\nThe cost of interruption is not the interruption.",
+      "likes": "9.2K",
+      "reposts": "1.5K",
+      "reviewed": false,
+      "core": false,
+      "note": ""
+    },
+    {
+      "id": 7,
+      "author": "Helena Vos",
+      "handle": "@helenavos",
+      "date": "17 Jul",
+      "tags": [
+        "Hiring",
+        "Business"
+      ],
+      "title": "If you can't describe the role in a sentence, you're hiring a hope.",
+      "summary": "Vague senior roles fail because the organisation has not yet learned what it needs. Narrow, precisely scoped roles teach you the shape of the job, and they are the only ones you can evaluate honestly at ninety days.",
+      "concepts": [
+        "Scope precision",
+        "Naming the first 90 days' output"
+      ],
+      "actions": [
+        "Write the 90-day deliverable before writing the job post",
+        "Hire the smallest scope you can define exactly"
+      ],
+      "original": "Every failed senior hire I've made was a role I couldn't describe in one sentence.\n\nIf you can't name the first 90 days' output, you're hiring a hope.",
+      "likes": "2.8K",
+      "reposts": "331",
+      "reviewed": false,
+      "core": false,
+      "note": ""
+    },
+    {
+      "id": 8,
+      "author": "Marcus Oyelaran",
+      "handle": "@moyelaran",
+      "date": "15 Jul",
+      "tags": [
+        "Distribution",
+        "Business"
+      ],
+      "title": "Distribution is a product decision made early.",
+      "summary": "Products that spread have a mechanic inside the core loop that makes sharing rational for the user. Bolting marketing on afterwards means renting attention permanently instead of owning a channel.",
+      "concepts": [
+        "Distribution inside the loop",
+        "Owned channel vs rented attention"
+      ],
+      "actions": [
+        "Name the share mechanic before building the feature",
+        "Ask what makes sharing selfishly rational"
+      ],
+      "original": "'We'll figure out distribution later' is the most expensive sentence in early product work.\n\nBuild the channel into the loop, or accept that you'll be renting attention forever.",
+      "likes": "5.4K",
+      "reposts": "771",
+      "reviewed": false,
+      "core": true,
+      "note": ""
+    },
+    {
+      "id": 9,
+      "author": "Sana Bakhtiari",
+      "handle": "@sanabakh",
+      "date": "12 Jul",
+      "tags": [
+        "Philosophy",
+        "Self"
+      ],
+      "title": "Ambition without a stopping rule is a treadmill.",
+      "summary": "Defining what enough looks like in advance is the only mechanism that converts achievement into satisfaction. Without it, each milestone silently resets the baseline and the work never pays out.",
+      "concepts": [
+        "Stopping rules",
+        "Hedonic baseline reset"
+      ],
+      "actions": [
+        "Write down the number, the title, the life — then what you do after",
+        "Review the stopping rule once a year, in writing"
+      ],
+      "original": "Write down the number, the title, the life. Then write down what you will do when you have it.\n\nIf the second list is empty, the first one will never be enough.",
+      "likes": "15.1K",
+      "reposts": "3.4K",
+      "reviewed": true,
+      "core": true,
+      "note": ""
+    },
+    {
+      "id": 10,
+      "author": "Elias Fournier",
+      "handle": "@eliasf",
+      "date": "9 Jul",
+      "tags": [
+        "Career",
+        "Leverage"
+      ],
+      "title": "Specific knowledge feels like play to you and work to everyone else.",
+      "summary": "What you cannot be trained for sits at the intersection of genuine curiosity and years of accumulated pattern recognition. You find it by following interest past the point where it still looks like a career move.",
+      "concepts": [
+        "Specific knowledge",
+        "Curiosity as a search algorithm"
+      ],
+      "actions": [
+        "Follow the interest that looks least strategic for one month",
+        "Notice what you explain to friends unprompted"
+      ],
+      "original": "Specific knowledge is found by following your curiosity past the point where it looks like a career move.\n\nIt feels like play to you and work to everyone else. That's the tell.",
+      "likes": "7.8K",
+      "reposts": "1.1K",
+      "reviewed": false,
+      "core": false,
+      "note": ""
+    },
+    {
+      "id": 11,
+      "author": "Clara Nyström",
+      "handle": "@claranys",
+      "date": "4 Jul",
+      "tags": [
+        "Tools",
+        "Writing"
+      ],
+      "title": "A note you never revisit is a cost, not an asset.",
+      "summary": "Capture is the cheap half of thinking; retrieval is the half that pays. A system with no resurfacing mechanism is an archive that quietly bills you attention every time you add to it.",
+      "concepts": [
+        "Capture vs retrieval",
+        "Archives have carrying costs"
+      ],
+      "actions": [
+        "Schedule retrieval, not capture",
+        "Delete anything you would not want returned to you"
+      ],
+      "original": "Everyone builds a capture system. Almost nobody builds a retrieval system.\n\nA note you never revisit is not an asset, it's a small recurring tax on your attention.",
+      "likes": "4.6K",
+      "reposts": "702",
+      "reviewed": false,
+      "core": false,
+      "note": ""
+    },
+    {
+      "id": 12,
+      "author": "Rina Okafor",
+      "handle": "@rinaokafor",
+      "date": "14 Mar",
+      "tags": [
+        "Business",
+        "Leverage"
+      ],
+      "title": "Nobody remembers your posting streak.",
+      "summary": "Consistency is overrated as a strategy: one piece of undeniable work outperforms two years of steady output. Volume is the search process you run to find that piece, not the point of the exercise.",
+      "concepts": [
+        "Volume as search, not strategy",
+        "Undeniable work"
+      ],
+      "actions": [
+        "Ask which of your last fifty posts was undeniable",
+        "Spend a month on one thing instead of thirty on many"
+      ],
+      "original": "Nobody remembers your posting streak. They remember the one thing that was too good to ignore.\n\nVolume is a search process, not a strategy.",
+      "likes": "11.3K",
+      "reposts": "2.6K",
+      "reviewed": false,
+      "core": false,
+      "note": ""
+    }
+  ],
+  "briefs": [
+    {
+      "no": 143,
+      "dateLine": "Tuesday, 28 July · Brief no. 143",
+      "shortDateLine": "Tue 28 Jul · Brief 143",
+      "dateShort": "28 Jul",
+      "mins": "4 min read",
+      "shortMins": "4 min",
+      "headline": "Three of last week's saves are the same idea in different clothes.",
+      "lede": "Leverage as repetition, and a March save that disagrees.",
+      "paras": [
+        "Good morning, Sam. You saved eleven posts last week — a light week — and three of them are arguing the same thing: that leverage has less to do with capital than with being willing to repeat one narrow claim in public until people believe it.",
+        "I have grouped those three below so you can read them as one argument. Then I pulled forward something you saved in March and never opened, because it makes almost the opposite case, and the disagreement seems more useful than either post alone."
+      ],
+      "closer": "Nothing else this week needs you today.",
+      "sectionLabel": "Three ideas on leverage",
+      "itemIds": [
+        1,
+        10,
+        4
+      ],
+      "resId": 12,
+      "resLabel": "Resurfaced · saved 14 March, never reviewed",
+      "resLabelShort": "Resurfaced · saved 14 Mar",
+      "promptQ": "You saved a claim about pricing four days ago. What did it say the real problem is, when someone says they have a pricing problem?",
+      "promptA": "Not the number — who the product is for. Raising price changes which customers show up and what they expect; the bad-fit buyers were generating most of the support load.",
+      "promptSourceId": 2,
+      "promptSource": "Ivo Marchetti, 25 Jul"
+    },
+    {
+      "no": 142,
+      "dateLine": "Monday, 27 July · Brief no. 142",
+      "shortDateLine": "Mon 27 Jul · Brief 142",
+      "dateShort": "27 Jul",
+      "mins": "3 min read",
+      "shortMins": "3 min",
+      "headline": "Nothing new needed you yesterday, so I went looking backwards.",
+      "lede": "Two saves about attention, and why your capture system keeps growing.",
+      "paras": [
+        "You saved nothing on Sunday, which is the first quiet day in three weeks. Rather than pad this out, I went back through what you have been saving about attention and found two posts that answer each other.",
+        "One argues that the cost of an interruption is the twenty minutes after it, not the interruption. The other argues that a note you never revisit is a recurring tax rather than an asset. Read together they are the same claim about the same resource."
+      ],
+      "closer": "That is the whole brief. Enjoy the short one.",
+      "sectionLabel": "Two ideas about attention",
+      "itemIds": [
+        6,
+        11
+      ],
+      "resId": 3,
+      "resLabel": "Resurfaced · saved 24 July, reviewed once",
+      "resLabelShort": "Resurfaced · saved 24 Jul",
+      "promptQ": "What did the post on interruptions say you actually lose when you check a message mid-task?",
+      "promptA": "The next twenty minutes of depth, not the thirty seconds of switching. Attention residue is the cost, which is why batching protects context rather than time.",
+      "promptSourceId": 6,
+      "promptSource": "Tomas Weiland, 19 Jul"
+    },
+    {
+      "no": 141,
+      "dateLine": "Friday, 24 July · Brief no. 141",
+      "shortDateLine": "Fri 24 Jul · Brief 141",
+      "dateShort": "24 Jul",
+      "mins": "5 min read",
+      "shortMins": "5 min",
+      "headline": "You keep saving arguments about pricing. Here is what they add up to.",
+      "lede": "Three saves since March, one consistent claim, one conspicuous gap.",
+      "paras": [
+        "Since March you have saved three posts about pricing and none about discounting or packaging. They agree more than you might expect: price is a statement about who the product is for, and the symptoms people blame on price are usually targeting problems.",
+        "The one below about hiring is not about pricing at all, but it is the same error one layer out — vagueness about who, dressed up as a question about how much."
+      ],
+      "closer": "If you are heading into a pricing decision, the gap in the library is packaging.",
+      "sectionLabel": "What your pricing saves agree on",
+      "itemIds": [
+        2,
+        7
+      ],
+      "resId": 8,
+      "resLabel": "Resurfaced · saved 15 July, never reviewed",
+      "resLabelShort": "Resurfaced · saved 15 Jul",
+      "promptQ": "One of your saves names the thing that goes wrong when a role cannot be described in a sentence. What is it?",
+      "promptA": "You are hiring a hope. The organisation has not yet learned what it needs, so there is no ninety-day output to evaluate the hire against.",
+      "promptSourceId": 7,
+      "promptSource": "Helena Vos, 17 Jul"
+    },
+    {
+      "no": 140,
+      "dateLine": "Thursday, 23 July · Brief no. 140",
+      "shortDateLine": "Thu 23 Jul · Brief 140",
+      "dateShort": "23 Jul",
+      "mins": "3 min read",
+      "shortMins": "3 min",
+      "headline": "Two of this week’s saves are decision rules, not ideas.",
+      "lede": "Reversibility and stopping rules — both are filters you set once.",
+      "paras": [
+        "Most of what you save is an argument. Two things this week are not: they are rules you could apply this afternoon without agreeing with anyone.",
+        "Sort by reversibility before difficulty, and write down what enough looks like before you start. Both work by removing deliberation rather than improving it, which is why I put them together."
+      ],
+      "closer": "Worth keeping these two somewhere you will see them.",
+      "sectionLabel": "Two decision rules",
+      "itemIds": [
+        5,
+        9
+      ],
+      "resId": 3,
+      "resLabel": "Resurfaced · saved 24 July, reviewed once",
+      "resLabelShort": "Resurfaced · saved 24 Jul",
+      "promptQ": "What question does the reversibility post say to ask before analysing any decision?",
+      "promptA": "Can I undo this in a week? If yes it is a two-way door and does not deserve the deliberation budget.",
+      "promptSourceId": 5,
+      "promptSource": "Priya Raghunathan, 21 Jul"
+    },
+    {
+      "no": 139,
+      "dateLine": "Wednesday, 22 July · Brief no. 139",
+      "shortDateLine": "Wed 22 Jul · Brief 139",
+      "dateShort": "22 Jul",
+      "mins": "2 min read",
+      "shortMins": "2 min",
+      "headline": "You have saved the same sleep argument three times now.",
+      "lede": "Fixed wake time, morning light, everything else downstream.",
+      "paras": [
+        "Three separate posts, three separate months, the same two claims: anchor the wake time, get light early, treat the rest as downstream. I am not going to keep resurfacing this one unless you tell me it is still open.",
+        "I have marked the clearest of the three as core so it comes back less often but never disappears."
+      ],
+      "closer": "A short one. You already know this.",
+      "sectionLabel": "The sleep argument, once more",
+      "itemIds": [
+        3
+      ],
+      "resId": 6,
+      "resLabel": "Resurfaced · saved 19 July, never reviewed",
+      "resLabelShort": "Resurfaced · saved 19 Jul",
+      "promptQ": "What single intervention does your sleep save call the highest-leverage one?",
+      "promptA": "Waking at the same time every day, weekends included, for three weeks. Not a supplement, a mattress, or an app.",
+      "promptSourceId": 3,
+      "promptSource": "Amara Osei, 24 Jul"
+    },
+    {
+      "no": 138,
+      "dateLine": "Tuesday, 21 July · Brief no. 138",
+      "shortDateLine": "Tue 21 Jul · Brief 138",
+      "dateShort": "21 Jul",
+      "mins": "2 min read",
+      "shortMins": "2 min",
+      "headline": "One idea this week was worth the whole week.",
+      "lede": "Ambition without a stopping rule, and the streak post that argues with it.",
+      "paras": [
+        "You saved six posts and five of them were variations on advice you already have. The sixth is the one I would keep: ambition without a stated stopping rule never pays out, because each milestone silently resets the baseline.",
+        "I paired it with something from March about posting streaks, which is the same argument aimed at output instead of ambition."
+      ],
+      "closer": "Read the first one twice.",
+      "sectionLabel": "The one worth keeping",
+      "itemIds": [
+        9
+      ],
+      "resId": 12,
+      "resLabel": "Resurfaced · saved 14 March, never reviewed",
+      "resLabelShort": "Resurfaced · saved 14 Mar",
+      "promptQ": "What does the stopping-rule post say to write down, and what does it say to write next to it?",
+      "promptA": "The number, the title, the life — then what you will do once you have them. If the second list is empty the first will never be enough.",
+      "promptSourceId": 9,
+      "promptSource": "Sana Bakhtiari, 12 Jul"
+    }
+  ],
+  "relations": {
+    "1": [
+      [
+        12,
+        "Argues the opposite"
+      ],
+      [
+        10,
+        "Same claim, narrower"
+      ],
+      [
+        4,
+        "The mechanism it needs"
+      ]
+    ],
+    "2": [
+      [
+        7,
+        "Same error, one layer out"
+      ],
+      [
+        8,
+        "Also decided too late"
+      ],
+      [
+        4,
+        "Precision over volume"
+      ]
+    ],
+    "3": [
+      [
+        6,
+        "Same argument, for attention"
+      ],
+      [
+        9,
+        "A default you set once"
+      ]
+    ],
+    "4": [
+      [
+        1,
+        "The leverage it creates"
+      ],
+      [
+        10,
+        "Where the specificity comes from"
+      ],
+      [
+        12,
+        "Argues volume is only search"
+      ]
+    ],
+    "5": [
+      [
+        9,
+        "Both are decision rules"
+      ],
+      [
+        6,
+        "What deliberation costs you"
+      ]
+    ],
+    "6": [
+      [
+        3,
+        "Same claim, other resource"
+      ],
+      [
+        11,
+        "Why capture systems fail"
+      ]
+    ],
+    "7": [
+      [
+        2,
+        "Vagueness about who, again"
+      ],
+      [
+        9,
+        "Name the output first"
+      ]
+    ],
+    "8": [
+      [
+        4,
+        "The channel writing builds"
+      ],
+      [
+        1,
+        "Owning versus renting"
+      ]
+    ],
+    "9": [
+      [
+        5,
+        "Both are decision rules"
+      ],
+      [
+        3,
+        "A default you set once"
+      ],
+      [
+        12,
+        "Output, not ambition"
+      ]
+    ],
+    "10": [
+      [
+        1,
+        "Where leverage comes from"
+      ],
+      [
+        4,
+        "How you find it in public"
+      ],
+      [
+        12,
+        "Argues for one undeniable piece"
+      ]
+    ],
+    "11": [
+      [
+        6,
+        "Attention is the cost"
+      ],
+      [
+        12,
+        "Volume without retrieval"
+      ]
+    ],
+    "12": [
+      [
+        1,
+        "Argues the opposite"
+      ],
+      [
+        10,
+        "Undeniable needs specific"
+      ],
+      [
+        4,
+        "Precision over volume"
+      ]
+    ]
+  },
+  "askCorpus": [
+    {
+      "keys": [
+        "pricing",
+        "price",
+        "charge",
+        "revenue",
+        "discount"
+      ],
+      "label": "Across 3 saves about pricing",
+      "paras": [
+        "Your saves converge on one claim: price is a statement about who the product is for, not an output of a spreadsheet. Two of them go further and argue that the churn and support load you would blame on price is actually a targeting problem wearing a pricing costume.",
+        "You have nothing saved about packaging, discounting, or enterprise tiers. If that is where you are heading, the gap is conspicuous — the library will not help you there yet."
+      ],
+      "ids": [
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "keys": [
+        "leverage",
+        "public",
+        "audience",
+        "build in public",
+        "reputation",
+        "writing"
+      ],
+      "label": "Across 4 saves about leverage",
+      "paras": [
+        "Your library treats leverage as a distribution problem rather than a capital one. Four ideas, saved eight months apart, land in the same place: pick one narrow claim, repeat it in public, let reputation compound into permission you never had to ask for.",
+        "They disagree about volume, which is the interesting part. Rina Okafor argues consistency is overrated and one undeniable piece beats two years of steady output; the others treat volume as the search process that finds that piece."
+      ],
+      "ids": [
+        1,
+        10,
+        4,
+        12
+      ]
+    },
+    {
+      "keys": [
+        "sleep",
+        "health",
+        "energy",
+        "rest"
+      ],
+      "label": "Across 2 saves about sleep",
+      "paras": [
+        "Only two saves, and they agree: fix the wake time, get light early, treat everything else as downstream. Nothing you have saved defends supplements, mattresses, or tracking.",
+        "The second one is not about sleep at all — it makes the same shape of argument about attention. You saved them the same week, which is probably why."
+      ],
+      "ids": [
+        3,
+        6
+      ]
+    },
+    {
+      "keys": [
+        "attention",
+        "focus",
+        "deep work",
+        "interruption",
+        "notes",
+        "system"
+      ],
+      "label": "Across 3 saves about attention",
+      "paras": [
+        "The through-line is that attention has a carrying cost you keep paying after the moment of distraction. An interruption costs the next twenty minutes, not the thirty seconds; a note you never revisit is a small recurring tax rather than an asset.",
+        "Both point at the same fix, which you have not saved anything about: scheduling retrieval instead of capture."
+      ],
+      "ids": [
+        6,
+        11,
+        3
+      ]
+    },
+    {
+      "keys": [
+        "decision",
+        "decide",
+        "choice",
+        "reversible",
+        "enough",
+        "ambition"
+      ],
+      "label": "Across 3 saves about decisions",
+      "paras": [
+        "Two of your saves are rules rather than arguments: sort by reversibility before difficulty, and define what enough looks like before you begin. Both work by removing deliberation rather than improving it.",
+        "A third, about hiring, is the same instinct applied to scope — name the ninety-day output before you write the job post."
+      ],
+      "ids": [
+        5,
+        9,
+        7
+      ]
+    }
+  ]
+}

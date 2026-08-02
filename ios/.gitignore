@@ -1,0 +1,14 @@
+# Xcode
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+build/
+DerivedData/
+
+# Commonplace.xcodeproj IS committed on purpose, so the project opens without
+# installing xcodegen first. project.yml remains the source of truth — run
+# `xcodegen generate` after adding or moving files.
+
+# macOS
+.DS_Store

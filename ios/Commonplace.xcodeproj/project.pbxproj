@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02F73F275821A967CF12E49D /* InstrumentSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F50CA7D9B848B5DE284A5BD0 /* InstrumentSans-Regular.ttf */; };
+		03AFE545164F3DD682B546E1 /* BriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4870560A397DF3B2E8FEA58C /* BriefView.swift */; };
+		279901C207786F13FCC84433 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A43C8703AC5B35E21915CC /* ScreenshotTests.swift */; };
+		35785A806CE4F08AB664F98E /* Seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 5121B9B42580D85F17AFBC9A /* Seed.json */; };
+		4A768155106897B2E2765FFB /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289CEE6A20E322AB8F914808 /* Typography.swift */; };
+		53F0D836B3B97F66E491290C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF626F8C6521D6D2B9D69F75 /* Store.swift */; };
+		625EC1D34123C55E60DECD75 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF546799906277B40002C3BB /* LibraryView.swift */; };
+		6263A0D124D1AF189ACBDEF5 /* Newsreader-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6D899FB05BA2D2367F7B21B /* Newsreader-Italic.ttf */; };
+		69DE7C4EEFA534C14D10B1DA /* InstrumentSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7F1F3A6C63A44449D7A1303 /* InstrumentSans-SemiBold.ttf */; };
+		6E2226A4FE1C29F6C3C178A4 /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A78783AC3D9C9F9A589755 /* Primitives.swift */; };
+		761DC540F3A137989ABF6597 /* InstrumentSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08C6BF5B3100349575F9D300 /* InstrumentSans-Medium.ttf */; };
+		7F5473C5B68CDA04615C98D9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66919A768901CEC3645FC46D /* OnboardingView.swift */; };
+		848705E11D52BB585A84DD29 /* CommonplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389794030548091D3CBD045 /* CommonplaceApp.swift */; };
+		851767BCD1A5AAE426DE4669 /* Newsreader-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19EE1B0DE649AEE02DCEAA5E /* Newsreader-Regular.ttf */; };
+		89ED3682F92B8C32258BD9B6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2E19779C460320DC8F546 /* Models.swift */; };
+		B5E80B60920522C606D8B327 /* OFL-InstrumentSans.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FE2157C1F05BA7BEC1CAE1 /* OFL-InstrumentSans.txt */; };
+		B75F1EBDA06A5C3D836ED3A6 /* OFL-Newsreader.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC0F69386A46D2EE989144CB /* OFL-Newsreader.txt */; };
+		C640157E9255E1AA5CEDFFBA /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D3B8950C37B1288FD60BFC /* ArchiveView.swift */; };
+		D2D8B22D89A7EBBE7EAC8CA5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF2D4BF54274723814DA9E /* DetailView.swift */; };
+		E37270B89553C1EBCD30A8C0 /* AskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63462BC7E8C08B95D07B2DFB /* AskView.swift */; };
+		E934A862F38D35C9F5530865 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8637392A5C68E0AB0536C7F /* SettingsView.swift */; };
+		EC6AE2966B3DD5FBAD1C7DDD /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A1971B40D9D13C1E9EBFA /* Palette.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		896024592EAFA865EC3CE970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3245B8D640368FC70FD93381 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F8469FBB3007B84EAB56B84;
+			remoteInfo = Commonplace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01D3B8950C37B1288FD60BFC /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
+		0745549E896E0B48E50520AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		08C6BF5B3100349575F9D300 /* InstrumentSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSans-Medium.ttf"; sourceTree = "<group>"; };
+		1389794030548091D3CBD045 /* CommonplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonplaceApp.swift; sourceTree = "<group>"; };
+		19EE1B0DE649AEE02DCEAA5E /* Newsreader-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Newsreader-Regular.ttf"; sourceTree = "<group>"; };
+		26A43C8703AC5B35E21915CC /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
+		289CEE6A20E322AB8F914808 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		36A78783AC3D9C9F9A589755 /* Primitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitives.swift; sourceTree = "<group>"; };
+		38C2E19779C460320DC8F546 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		3D4A1971B40D9D13C1E9EBFA /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		4870560A397DF3B2E8FEA58C /* BriefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefView.swift; sourceTree = "<group>"; };
+		5121B9B42580D85F17AFBC9A /* Seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Seed.json; sourceTree = "<group>"; };
+		60A0CFD9047ACA93BB4409A7 /* CommonplaceUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CommonplaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63462BC7E8C08B95D07B2DFB /* AskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskView.swift; sourceTree = "<group>"; };
+		66919A768901CEC3645FC46D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		81FE2157C1F05BA7BEC1CAE1 /* OFL-InstrumentSans.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OFL-InstrumentSans.txt"; sourceTree = "<group>"; };
+		BE36FD535E1B97526755454F /* Commonplace.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Commonplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D899FB05BA2D2367F7B21B /* Newsreader-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Newsreader-Italic.ttf"; sourceTree = "<group>"; };
+		C7F1F3A6C63A44449D7A1303 /* InstrumentSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		DC0F69386A46D2EE989144CB /* OFL-Newsreader.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OFL-Newsreader.txt"; sourceTree = "<group>"; };
+		DF626F8C6521D6D2B9D69F75 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E8637392A5C68E0AB0536C7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EF546799906277B40002C3BB /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		F50CA7D9B848B5DE284A5BD0 /* InstrumentSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSans-Regular.ttf"; sourceTree = "<group>"; };
+		FEAF2D4BF54274723814DA9E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1644B93B12B08BE6C4792062 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				08C6BF5B3100349575F9D300 /* InstrumentSans-Medium.ttf */,
+				F50CA7D9B848B5DE284A5BD0 /* InstrumentSans-Regular.ttf */,
+				C7F1F3A6C63A44449D7A1303 /* InstrumentSans-SemiBold.ttf */,
+				C6D899FB05BA2D2367F7B21B /* Newsreader-Italic.ttf */,
+				19EE1B0DE649AEE02DCEAA5E /* Newsreader-Regular.ttf */,
+				81FE2157C1F05BA7BEC1CAE1 /* OFL-InstrumentSans.txt */,
+				DC0F69386A46D2EE989144CB /* OFL-Newsreader.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4E0C98117D948C8AFA1F0E6E /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				3D4A1971B40D9D13C1E9EBFA /* Palette.swift */,
+				289CEE6A20E322AB8F914808 /* Typography.swift */,
+				1644B93B12B08BE6C4792062 /* Fonts */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		55A247C53FDE53DF3C391AAE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				36A78783AC3D9C9F9A589755 /* Primitives.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		766552CDD149D86B33128C4B = {
+			isa = PBXGroup;
+			children = (
+				99BC6CDAF0171149763F3B91 /* Commonplace */,
+				872B2BF008FA349C73CCEA40 /* CommonplaceUITests */,
+				9B8DF51B091AACCD4F08D66F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		872B2BF008FA349C73CCEA40 /* CommonplaceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26A43C8703AC5B35E21915CC /* ScreenshotTests.swift */,
+			);
+			path = CommonplaceUITests;
+			sourceTree = "<group>";
+		};
+		8FFC037FD106CCFE2BC2E525 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5121B9B42580D85F17AFBC9A /* Seed.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		99BC6CDAF0171149763F3B91 /* Commonplace */ = {
+			isa = PBXGroup;
+			children = (
+				1389794030548091D3CBD045 /* CommonplaceApp.swift */,
+				0745549E896E0B48E50520AF /* Info.plist */,
+				38C2E19779C460320DC8F546 /* Models.swift */,
+				DF626F8C6521D6D2B9D69F75 /* Store.swift */,
+				55A247C53FDE53DF3C391AAE /* Components */,
+				4E0C98117D948C8AFA1F0E6E /* Design */,
+				8FFC037FD106CCFE2BC2E525 /* Resources */,
+				9CD82A791609B9F102737498 /* Screens */,
+			);
+			path = Commonplace;
+			sourceTree = "<group>";
+		};
+		9B8DF51B091AACCD4F08D66F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE36FD535E1B97526755454F /* Commonplace.app */,
+				60A0CFD9047ACA93BB4409A7 /* CommonplaceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CD82A791609B9F102737498 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				01D3B8950C37B1288FD60BFC /* ArchiveView.swift */,
+				63462BC7E8C08B95D07B2DFB /* AskView.swift */,
+				4870560A397DF3B2E8FEA58C /* BriefView.swift */,
+				FEAF2D4BF54274723814DA9E /* DetailView.swift */,
+				EF546799906277B40002C3BB /* LibraryView.swift */,
+				66919A768901CEC3645FC46D /* OnboardingView.swift */,
+				E8637392A5C68E0AB0536C7F /* SettingsView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F8469FBB3007B84EAB56B84 /* Commonplace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 275C9EAAF4F9DDA51AA1C967 /* Build configuration list for PBXNativeTarget "Commonplace" */;
+			buildPhases = (
+				C28184F924AAB39353472739 /* Sources */,
+				E76AA7A2A5E97A60E294633C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Commonplace;
+			packageProductDependencies = (
+			);
+			productName = Commonplace;
+			productReference = BE36FD535E1B97526755454F /* Commonplace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B261FF3662ACD6C3B375CB37 /* CommonplaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B0DFF46697D442EEC6AD90 /* Build configuration list for PBXNativeTarget "CommonplaceUITests" */;
+			buildPhases = (
+				BFE6405A74A0667C31C4C2FB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABBDED4123EF8AC48EE96CE7 /* PBXTargetDependency */,
+			);
+			name = CommonplaceUITests;
+			packageProductDependencies = (
+			);
+			productName = CommonplaceUITests;
+			productReference = 60A0CFD9047ACA93BB4409A7 /* CommonplaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3245B8D640368FC70FD93381 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B261FF3662ACD6C3B375CB37 = {
+						TestTargetID = 0F8469FBB3007B84EAB56B84;
+					};
+				};
+			};
+			buildConfigurationList = E6D567E7995C267A447E9DFB /* Build configuration list for PBXProject "Commonplace" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 766552CDD149D86B33128C4B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9B8DF51B091AACCD4F08D66F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F8469FBB3007B84EAB56B84 /* Commonplace */,
+				B261FF3662ACD6C3B375CB37 /* CommonplaceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E76AA7A2A5E97A60E294633C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761DC540F3A137989ABF6597 /* InstrumentSans-Medium.ttf in Resources */,
+				02F73F275821A967CF12E49D /* InstrumentSans-Regular.ttf in Resources */,
+				69DE7C4EEFA534C14D10B1DA /* InstrumentSans-SemiBold.ttf in Resources */,
+				6263A0D124D1AF189ACBDEF5 /* Newsreader-Italic.ttf in Resources */,
+				851767BCD1A5AAE426DE4669 /* Newsreader-Regular.ttf in Resources */,
+				B5E80B60920522C606D8B327 /* OFL-InstrumentSans.txt in Resources */,
+				B75F1EBDA06A5C3D836ED3A6 /* OFL-Newsreader.txt in Resources */,
+				35785A806CE4F08AB664F98E /* Seed.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFE6405A74A0667C31C4C2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279901C207786F13FCC84433 /* ScreenshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28184F924AAB39353472739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C640157E9255E1AA5CEDFFBA /* ArchiveView.swift in Sources */,
+				E37270B89553C1EBCD30A8C0 /* AskView.swift in Sources */,
+				03AFE545164F3DD682B546E1 /* BriefView.swift in Sources */,
+				848705E11D52BB585A84DD29 /* CommonplaceApp.swift in Sources */,
+				D2D8B22D89A7EBBE7EAC8CA5 /* DetailView.swift in Sources */,
+				625EC1D34123C55E60DECD75 /* LibraryView.swift in Sources */,
+				89ED3682F92B8C32258BD9B6 /* Models.swift in Sources */,
+				7F5473C5B68CDA04615C98D9 /* OnboardingView.swift in Sources */,
+				EC6AE2966B3DD5FBAD1C7DDD /* Palette.swift in Sources */,
+				6E2226A4FE1C29F6C3C178A4 /* Primitives.swift in Sources */,
+				E934A862F38D35C9F5530865 /* SettingsView.swift in Sources */,
+				53F0D836B3B97F66E491290C /* Store.swift in Sources */,
+				4A768155106897B2E2765FFB /* Typography.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABBDED4123EF8AC48EE96CE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F8469FBB3007B84EAB56B84 /* Commonplace */;
+			targetProxy = 896024592EAFA865EC3CE970 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		33325BC22C522E4E58633652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Commonplace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.commonplace.app;
+				PRODUCT_NAME = Commonplace;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5EF29F8632AD1E2F77ECC7D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9BE953FAC765B6F4169FE3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.commonplace.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Commonplace;
+			};
+			name = Debug;
+		};
+		B0C33F7FDE3B28117133FC9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.commonplace.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Commonplace;
+			};
+			name = Release;
+		};
+		BF776459541ED357AE21BDCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Commonplace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.commonplace.app;
+				PRODUCT_NAME = Commonplace;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EDBCA7D119D15DDFD3E9F33D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		275C9EAAF4F9DDA51AA1C967 /* Build configuration list for PBXNativeTarget "Commonplace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF776459541ED357AE21BDCE /* Debug */,
+				33325BC22C522E4E58633652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E6D567E7995C267A447E9DFB /* Build configuration list for PBXProject "Commonplace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF29F8632AD1E2F77ECC7D1 /* Debug */,
+				EDBCA7D119D15DDFD3E9F33D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F8B0DFF46697D442EEC6AD90 /* Build configuration list for PBXNativeTarget "CommonplaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE953FAC765B6F4169FE3B6 /* Debug */,
+				B0C33F7FDE3B28117133FC9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3245B8D640368FC70FD93381 /* Project object */;
+}

@@ -1,0 +1,23 @@
+# ── The design handoff bundle — deliberately not published ──────────────────
+#
+# The specs and the HTML prototype are the brief this project was built from,
+# and are not ours to redistribute. They stay in the working directory so the
+# generators in tools/ keep working locally.
+#
+# The content they produce IS committed (web/src/lib/seed.ts and
+# ios/Commonplace/Resources/Seed.json), so both apps build from a clean clone.
+
+prototype/
+01-design-spec.md
+02-interactions-and-state.md
+03-react-web-app.md
+04-swift-ios-app.md
+CLAUDE.md
+
+# ── Local tooling ───────────────────────────────────────────────────────────
+
+.claude/
+
+# ── macOS ───────────────────────────────────────────────────────────────────
+
+.DS_Store

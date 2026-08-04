@@ -18,9 +18,37 @@ import { xApiSource } from '@/lib/sources/x-api'
  */
 
 const DEFAULT_MAX_PAGES = 20
+/**
+ * A hard ceiling the environment cannot raise. SYNC_MAX_PAGES is the knob, but
+ * a fat-fingered `2000` there would be a four-figure bill, so the config is
+ * clamped rather than trusted — the whole point of this route is bounded spend.
+ */
+const MAX_PAGES_CEILING = 50
 const CHUNK = 200
 
-export async function POST() {
+function pageLimit(): number {
+  const configured = Number(process.env.SYNC_MAX_PAGES)
+  if (!Number.isFinite(configured) || configured < 1) return DEFAULT_MAX_PAGES
+  return Math.min(Math.floor(configured), MAX_PAGES_CEILING)
+}
+
+export async function POST(request: Request) {
+  // Defence in depth against a cross-site POST spending money. Auth.js sets
+  // SameSite=Lax on the session cookie, which already stops the cookie riding
+  // along on a cross-site form post; this refuses the request outright.
+  const origin = request.headers.get('origin')
+  if (origin) {
+    let sameOrigin = false
+    try {
+      sameOrigin = new URL(origin).host === request.headers.get('host')
+    } catch {
+      sameOrigin = false
+    }
+    if (!sameOrigin) {
+      return Response.json({ error: 'Cross-origin request refused.' }, { status: 403 })
+    }
+  }
+
   const allowlisted = process.env.X_ALLOWLIST_USER_ID
   const session = await auth()
 
@@ -53,7 +81,7 @@ export async function POST() {
     .where(eq(schema.bookmarks.userId, connection.userId))
   const knownPostIds = new Set(stored.map((r) => r.postId))
 
-  const maxPages = Number(process.env.SYNC_MAX_PAGES) || DEFAULT_MAX_PAGES
+  const maxPages = pageLimit()
   let cursor = connection.nextToken ?? undefined
 
   const source = xApiSource({
@@ -71,12 +99,11 @@ export async function POST() {
   try {
     posts = await source.fetchNew()
   } catch (e) {
-    // The cursor is not advanced on failure, so a retry resumes rather than
-    // paying for the same pages twice.
-    return Response.json(
-      { error: e instanceof Error ? e.message : 'Sync failed.' },
-      { status: 502 },
-    )
+    // Logged, not returned: upstream messages can carry request context, and a
+    // caller has no use for them. The cursor is not advanced on failure, so a
+    // retry resumes rather than paying for the same pages twice.
+    console.error('[sync] fetch failed', e)
+    return Response.json({ error: 'Could not read from X. Nothing was changed.' }, { status: 502 })
   }
 
   for (let i = 0; i < posts.length; i += CHUNK) {

@@ -34,7 +34,9 @@ export const connections = pgTable('connections', {
   userId: uuid('user_id')
     .primaryKey()
     .references(() => users.id, { onDelete: 'cascade' }),
-  accessToken: text('access_token').notNull(), // encrypt at rest
+  // AES-256-GCM envelopes, not bare tokens — see lib/db/crypto.ts. Written and
+  // read only through lib/db/connections.ts, which does the encoding.
+  accessToken: text('access_token').notNull(),
   refreshToken: text('refresh_token'),
   expiresAt: timestamp('expires_at', { withTimezone: true }),
   scopes: text('scopes').array(),

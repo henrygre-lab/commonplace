@@ -92,6 +92,16 @@ product in real use, not a demo with twelve rows in it.
 So a hard-coded total is a bug in `web/` and correct in `ios/` and `android/`.
 All three READMEs say so at the top of their gotchas.
 
+## Security
+
+[`SECURITY_CHECKLIST.md`](SECURITY_CHECKLIST.md) is a standing requirement, not
+a suggestion — read it before changing anything that touches auth, the database,
+a route handler or a third-party API. It also records the accepted risks and the
+open items, so neither has to be rediscovered.
+
+Only `web/` has a network, a database or credentials. The two portfolio builds
+read committed seed data and declare no permissions at all.
+
 ## Content and the design bundle
 
 The 12 bookmarks, 6 briefs, connection graph and Ask answers are **written

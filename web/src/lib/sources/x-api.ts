@@ -83,7 +83,11 @@ export function xApiSource(opts: XApiOptions): BookmarkSource {
           headers: { Authorization: `Bearer ${opts.accessToken}` },
         })
         if (!res.ok) {
-          throw new Error(`X bookmarks request failed: ${res.status} ${await res.text()}`)
+          // The response body can echo the request, including the bearer token
+          // in some error shapes. It goes to the server log and never into the
+          // thrown message, which callers may surface.
+          console.error('[x-api] bookmarks request failed', res.status, await res.text())
+          throw new Error(`X bookmarks request failed with status ${res.status}`)
         }
 
         const page = (await res.json()) as ApiPage

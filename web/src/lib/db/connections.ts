@@ -1,4 +1,5 @@
 import { eq } from 'drizzle-orm'
+import { decryptToken, encryptToken } from './crypto'
 import { db, schema } from './index'
 
 /**
@@ -24,6 +25,11 @@ export type ConnectionInput = {
 export async function upsertConnection(input: ConnectionInput): Promise<string> {
   const d = db()
 
+  // Encrypt before the values go anywhere near a query, so a thrown key error
+  // aborts the write rather than leaving a half-written plaintext row.
+  const accessToken = encryptToken(input.accessToken)
+  const refreshToken = input.refreshToken ? encryptToken(input.refreshToken) : null
+
   const [user] = await d
     .insert(schema.users)
     .values({
@@ -46,8 +52,8 @@ export async function upsertConnection(input: ConnectionInput): Promise<string> 
     .insert(schema.connections)
     .values({
       userId: user.id,
-      accessToken: input.accessToken,
-      refreshToken: input.refreshToken ?? null,
+      accessToken,
+      refreshToken,
       expiresAt: input.expiresAt ? new Date(input.expiresAt * 1000) : null,
       scopes: input.scopes,
       source: 'x-api',
@@ -55,8 +61,8 @@ export async function upsertConnection(input: ConnectionInput): Promise<string> 
     .onConflictDoUpdate({
       target: schema.connections.userId,
       set: {
-        accessToken: input.accessToken,
-        refreshToken: input.refreshToken ?? null,
+        accessToken,
+        refreshToken,
         expiresAt: input.expiresAt ? new Date(input.expiresAt * 1000) : null,
         scopes: input.scopes,
         // lastSyncAt and nextToken are deliberately untouched: signing in again
@@ -84,5 +90,6 @@ export async function getConnection(xUserId: string) {
     .where(eq(schema.users.xUserId, xUserId))
     .limit(1)
 
-  return row ?? null
+  if (!row) return null
+  return { ...row, accessToken: decryptToken(row.accessToken) }
 }

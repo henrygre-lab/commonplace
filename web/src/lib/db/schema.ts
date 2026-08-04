@@ -54,6 +54,13 @@ export const bookmarks = pgTable(
     authorAvatar: text('author_avatar'),
     postedAt: timestamp('posted_at', { withTimezone: true }),
     savedAt: timestamp('saved_at', { withTimezone: true }).notNull(),
+    /**
+     * Position in the X bookmark list at ingest, 0 = most recently saved. X
+     * returns no bookmark timestamp, so for a backfill `savedAt` is a fallback
+     * and this is the only faithful ordering. Null for sources that do know
+     * when something was saved.
+     */
+    bookmarkOrder: integer('bookmark_order'),
     original: text('original').notNull(), // full post text, \n\n preserved
     likes: integer('likes'),
     reposts: integer('reposts'),

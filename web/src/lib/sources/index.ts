@@ -10,7 +10,20 @@ export type RawPost = {
   authorHandle: string
   authorAvatar?: string
   postedAt?: Date
-  savedAt: Date
+  /**
+   * When the user saved the post — only where the source actually knows. X's
+   * bookmarks endpoint returns no bookmark timestamp, so this is undefined for
+   * an API backfill and the ingest falls back to `postedAt`. Stamping every
+   * backfilled row with the sync time would collapse the library's date
+   * grouping into a single bucket.
+   */
+  savedAt?: Date
+  /**
+   * Position in the source's own ordering, 0 = most recently saved. For the X
+   * API this is the only ordering signal there is, which is why it is carried
+   * through and persisted rather than inferred from a timestamp.
+   */
+  bookmarkOrder?: number
   /** full post text, \n\n between paragraphs */
   original: string
   likes?: number

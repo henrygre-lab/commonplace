@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { signIn } from 'next-auth/react'
 import { Eyebrow, Wordmark } from '@/components/primitives'
 import { SEED_BOOKMARKS } from '@/lib/seed'
 import { tagHue } from '@/lib/tags'
@@ -66,9 +68,12 @@ const PERMISSIONS = [
   { title: 'Summaries stay yours', desc: 'Export or delete everything in one click.' },
 ]
 
-export function Connect() {
-  const router = useRouter()
+export function Connect({ error }: { error?: string }) {
   const [connecting, setConnecting] = useState(false)
+
+  // Auth.js redirects failures back here (pages.signIn and pages.error both
+  // point at /connect) so the explanation stays in our own voice.
+  const refused = error === 'AccessDenied'
 
   return (
     <Frame>
@@ -86,11 +91,25 @@ export function Connect() {
           One connection. Read-only. Revoke it whenever you like.
         </p>
 
-        {/* The flow below is a demonstration — there is no OAuth behind it. Said
-            plainly here so nobody reaches the button believing otherwise. */}
-        <p className="mb-[26px] text-center font-sans text-[13px] leading-[1.5] text-faint">
-          This is a demonstration. No account is connected, and nothing is read from X.
-        </p>
+        {/* The OAuth below is real, but reading bookmarks bills per resource,
+            so only one X account is admitted. Said plainly here so nobody
+            reaches the button expecting to connect their own. */}
+        {error ? (
+          <p className="mb-[26px] text-center font-sans text-[13px] leading-[1.5] text-danger">
+            {refused
+              ? 'That account is not on the allowlist, so nothing was connected.'
+              : 'The connection did not complete. Nothing was changed.'}{' '}
+            <Link href="/brief" className="underline decoration-danger-line underline-offset-[3px]">
+              The sample library is open
+            </Link>{' '}
+            if you would like to look around.
+          </p>
+        ) : (
+          <p className="mb-[26px] text-center font-sans text-[13px] leading-[1.5] text-faint">
+            Sign-in is real, but reading bookmarks is limited to the author&rsquo;s own account. If
+            you are here to look around, the sample library is open.
+          </p>
+        )}
 
         <div className="mb-[26px] rounded-[14px] border border-line bg-surface px-6 py-2">
           {PERMISSIONS.map((p, i) => (
@@ -116,16 +135,15 @@ export function Connect() {
           disabled={connecting}
           onClick={() => {
             setConnecting(true)
-            setTimeout(() => router.push('/setup'), 900)
+            // Auth.js's built-in id for X is `twitter`, so the callback URL is
+            // /api/auth/callback/twitter. The button says X because that is
+            // what the account is called now.
+            signIn('twitter', { callbackUrl: '/setup' }).catch(() => setConnecting(false))
           }}
           className="w-full rounded-[10px] bg-ink py-[15px] font-sans text-[15px] font-medium text-on-dark transition-colors duration-[180ms] hover:bg-dark-hover"
         >
           {connecting ? 'Authorising…' : 'Connect X account'}
         </button>
-
-        <p className="mt-4 text-center font-sans text-[12.5px] text-faint">
-          Signed in as <span className="text-muted">@samrieber</span>
-        </p>
       </div>
     </Frame>
   )

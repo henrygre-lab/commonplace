@@ -7,11 +7,16 @@ and returns the right ones to you each morning as a written brief. The thesis is
 **ideas, not archives**: people save high-signal posts and never revisit them, so
 the product's job is retrieval, not storage.
 
+### → [See it running](https://commonplace-livid.vercel.app)
+
+No sign-in required. The landing page is the pitch; **"See it with sample data"**
+opens the whole product on the seeded library.
+
 Two implementations of the same design live here.
 
 | | | |
 |---|---|---|
-| [`web/`](web) | **Next.js 16, React 19, Tailwind v4** | The real one. Connects an X account, summarises, sends briefs. Deploys to Vercel. |
+| [`web/`](web) | **Next.js 16, React 19, Tailwind v4** | The real one. Connects an X account, summarises, sends briefs. [Live on Vercel](https://commonplace-livid.vercel.app). |
 | [`ios/`](ios) | **SwiftUI, iOS 17+** | A portfolio build. No backend, bundled data, made to be screenshotted and screen-recorded. |
 
 <p align="center">

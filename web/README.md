@@ -3,11 +3,19 @@
 The live implementation — start at the [root README](../README.md) for what
 Commonplace is and the rules both apps share.
 
+**Deployed: https://commonplace-livid.vercel.app**
+
 ```bash
 npm run dev     # http://localhost:3000
 npm run build
 npm run lint
 ```
+
+Vercel builds from this subdirectory — the project's **Root Directory** is set to
+`web`, since the repository root holds both apps and has no `package.json`.
+Pushes to `main` deploy automatically. No environment variables are required:
+`DATABASE_URL` is read only inside `db()` in `src/lib/db/index.ts`, and nothing
+calls it yet.
 
 ## Where this stands
 

@@ -80,10 +80,16 @@ export function Connect() {
           Connect your X account
         </h1>
         <p
-          className="mb-[30px] text-center font-sans text-muted"
+          className="mb-[14px] text-center font-sans text-muted"
           style={{ fontSize: 14.5, lineHeight: 1.6 }}
         >
           One connection. Read-only. Revoke it whenever you like.
+        </p>
+
+        {/* The flow below is a demonstration — there is no OAuth behind it. Said
+            plainly here so nobody reaches the button believing otherwise. */}
+        <p className="mb-[26px] text-center font-sans text-[13px] leading-[1.5] text-faint">
+          This is a demonstration. No account is connected, and nothing is read from X.
         </p>
 
         <div className="mb-[26px] rounded-[14px] border border-line bg-surface px-6 py-2">

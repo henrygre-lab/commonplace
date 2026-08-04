@@ -3,34 +3,17 @@
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Avatar, Eyebrow, Wordmark } from './primitives'
+import { NAV, navKeyFor } from '@/lib/nav'
 import { useCounts } from '@/lib/store'
 import { tagHue } from '@/lib/tags'
 
-const NAV = [
-  { key: 'brief', href: '/brief', label: "Today's brief" },
-  { key: 'briefs', href: '/briefs', label: 'Past briefs' },
-  { key: 'library', href: '/library', label: 'Library' },
-  { key: 'ask', href: '/ask', label: 'Ask your library' },
-  { key: 'settings', href: '/settings', label: 'Settings' },
-] as const
-
-/** Detail counts as Library for nav highlighting (02 § 1, derived `effScreen`). */
-function screenOf(pathname: string): string {
-  if (pathname.startsWith('/idea')) return 'library'
-  if (pathname.startsWith('/library')) return 'library'
-  if (pathname.startsWith('/briefs')) return 'briefs'
-  if (pathname.startsWith('/brief')) return 'brief'
-  if (pathname.startsWith('/ask')) return 'ask'
-  if (pathname.startsWith('/settings')) return 'settings'
-  return ''
-}
 
 export function Sidebar() {
   const pathname = usePathname()
   const router = useRouter()
   const counts = useCounts()
   const params = useSearchParams()
-  const active = screenOf(pathname)
+  const active = navKeyFor(pathname)
   const activeTag = active === 'library' ? params.get('tag') : null
 
   const navCount: Record<string, number | null> = {

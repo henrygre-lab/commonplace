@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Wordmark } from './primitives'
+import { NAV, navKeyFor } from '@/lib/nav'
 import { useCounts } from '@/lib/store'
 
 /**
@@ -11,33 +12,21 @@ import { useCounts } from '@/lib/store'
  * bottom tab bar.
  */
 
-const ALL = [
-  { href: '/brief', label: "Today's brief", short: 'Brief' },
-  { href: '/briefs', label: 'Past briefs', short: 'Briefs' },
-  { href: '/library', label: 'Library', short: 'Library' },
-  { href: '/ask', label: 'Ask your library', short: 'Ask' },
-  { href: '/settings', label: 'Settings', short: 'Settings' },
-]
-
-const TABS = [ALL[0], ALL[2], ALL[3], ALL[4]]
-
-function isOn(pathname: string, href: string) {
-  if (href === '/library') return pathname.startsWith('/library') || pathname.startsWith('/idea')
-  if (href === '/brief') return pathname === '/brief' || /^\/brief\//.test(pathname)
-  return pathname.startsWith(href)
-}
+/** Past briefs is not a tab — it is reached from the brief header. */
+const TABS = NAV.filter((n) => n.key !== 'briefs')
 
 export function MobileNav() {
   const pathname = usePathname()
   const counts = useCounts()
+  const active = navKeyFor(pathname)
 
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-40 hidden items-center gap-6 border-b border-line-sidebar bg-ground-sunk px-6 py-[14px] md:flex lg:hidden">
         <Wordmark />
         <nav className="flex min-w-0 flex-1 items-center gap-[2px] overflow-x-auto">
-          {ALL.map((n) => {
-            const on = isOn(pathname, n.href)
+          {NAV.map((n) => {
+            const on = active === n.key
             return (
               <Link
                 key={n.href}
@@ -59,7 +48,7 @@ export function MobileNav() {
         className="fixed inset-x-0 bottom-0 z-40 flex border-t border-line-sidebar bg-ground-sunk md:hidden"
       >
         {TABS.map((n) => {
-          const on = isOn(pathname, n.href)
+          const on = active === n.key
           return (
             <Link
               key={n.href}

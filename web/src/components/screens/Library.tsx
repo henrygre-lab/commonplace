@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Avatar, Eyebrow, Segmented, TagChip } from '@/components/primitives'
+import { Avatar, Eyebrow, Screen, Segmented, TagChip } from '@/components/primitives'
 import { flattenIds, selectBuckets, selectVisible } from '@/lib/derive'
 import { claimFocus, type FocusTarget } from '@/lib/focusIntent'
 import { useCounts, useStore } from '@/lib/store'
@@ -190,10 +190,7 @@ export function Library() {
   const focusedId = visibleIds[focusIdx]
 
   return (
-    <div
-      className="cp-fade mx-auto w-full max-w-[1100px] pb-[90px] pt-[52px] md:pt-[104px] lg:pt-[52px]"
-      style={{ paddingLeft: 'clamp(24px,4vw,56px)', paddingRight: 'clamp(24px,4vw,56px)' }}
-    >
+    <Screen maxWidth={1100} top={52} bottom={90}>
       <div className="mb-7 flex flex-wrap items-end justify-between gap-6">
         <div>
           <h1 className="font-serif text-[38px] text-ink" style={{ letterSpacing: '-0.022em' }}>
@@ -281,7 +278,7 @@ export function Library() {
         <Key>f</Key> core · <Key>/</Key> search · <Key>g</Key> then <Key>b</Key> <Key>l</Key>{' '}
         <Key>a</Key> <Key>s</Key> jump
       </p>
-    </div>
+    </Screen>
   )
 }
 

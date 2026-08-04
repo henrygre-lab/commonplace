@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { Avatar, Eyebrow } from '@/components/primitives'
+import { Avatar, Eyebrow, Screen } from '@/components/primitives'
 import { useStore } from '@/lib/store'
 import type { Brief as BriefType } from '@/lib/types'
 
@@ -42,10 +42,7 @@ function BriefBody({ brief }: { brief: BriefType }) {
   const read = !!briefsRead[brief.no]
 
   return (
-    <article
-      className="mx-auto w-full max-w-[660px] pb-[110px] pt-16 md:pt-[116px] lg:pt-16"
-      style={{ paddingLeft: 'clamp(24px,4vw,56px)', paddingRight: 'clamp(24px,4vw,56px)' }}
-    >
+    <Screen as="article" maxWidth={660} top={64} bottom={110} fade={false}>
       {/* 1 — header rule */}
       <header className="cp-rise mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-line-strong pb-4">
         <div className="flex items-center gap-[10px]">
@@ -225,6 +222,6 @@ function BriefBody({ brief }: { brief: BriefType }) {
           </button>
         </footer>
       </div>
-    </article>
+    </Screen>
   )
 }

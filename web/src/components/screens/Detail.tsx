@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { Avatar, Eyebrow, SectionRule, TagChip } from '@/components/primitives'
+import { Avatar, Eyebrow, Screen, SectionRule, TagChip } from '@/components/primitives'
 import { SEED_RELATIONS } from '@/lib/seed'
 import { useStore } from '@/lib/store'
 import { reasonColour } from '@/lib/tags'
@@ -84,10 +84,7 @@ function DetailBody({ id }: { id: number }) {
   }
 
   return (
-    <div
-      className="cp-fade w-full pb-[100px] pt-[34px] md:pt-[86px] lg:pt-[34px]"
-      style={{ paddingLeft: 'clamp(24px,4vw,56px)', paddingRight: 'clamp(24px,4vw,56px)' }}
-    >
+    <Screen top={34} bottom={100}>
       <div className="mb-10 flex items-center justify-between">
         <Link
           href="/library"
@@ -312,7 +309,7 @@ function DetailBody({ id }: { id: number }) {
           </div>
         </aside>
       </div>
-    </div>
+    </Screen>
   )
 }
 

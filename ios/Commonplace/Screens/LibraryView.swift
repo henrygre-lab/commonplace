@@ -6,6 +6,10 @@ struct LibraryView: View {
 
     var body: some View {
         @Bindable var store = store
+        // `buckets` is a computed property: reading it re-runs the filter, the
+        // grouping and (for themes) the sort. Bind it once per render rather
+        // than touching it in both the empty check and the ForEach.
+        let buckets = store.buckets
 
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 0, pinnedViews: []) {
@@ -84,7 +88,7 @@ struct LibraryView: View {
                 .padding(.bottom, 4)
 
                 // ── Rows ─────────────────────────────────────────────────
-                if store.buckets.isEmpty {
+                if buckets.isEmpty {
                     VStack(spacing: 10) {
                         Text("Nothing here yet.").font(.serif(22)).foregroundStyle(Palette.ink)
                         Text("Try a broader search, or clear the filters.")
@@ -93,7 +97,7 @@ struct LibraryView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 70)
                 } else {
-                    ForEach(store.buckets) { bucket in
+                    ForEach(buckets) { bucket in
                         if store.groupBy != .none {
                             HStack(alignment: .firstTextBaseline, spacing: 12) {
                                 Text(bucket.label).font(.serif(15)).foregroundStyle(Palette.inkBody)

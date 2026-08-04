@@ -13,6 +13,44 @@ export function Wordmark({ className = '' }: { className?: string }) {
   )
 }
 
+/* ── Screen — the shared page container ───────────────────────────────────
+   Caps the reading measure and applies the gutter and chrome offsets defined
+   by .cp-screen. `fade` is the cpFade entrance every screen gets except the
+   brief, which stages its own cpRise blocks instead.                          */
+
+export function Screen({
+  children,
+  maxWidth,
+  top,
+  bottom,
+  fade = true,
+  as: Tag = 'div',
+}: {
+  children: React.ReactNode
+  /** Reading measure. Omitted on detail, which is two columns. */
+  maxWidth?: number
+  top: number
+  bottom: number
+  fade?: boolean
+  /** The brief is an `article`; everything else is a plain container. */
+  as?: 'div' | 'article'
+}) {
+  return (
+    <Tag
+      className={`cp-screen${fade ? ' cp-fade' : ''}`}
+      style={
+        {
+          maxWidth,
+          '--screen-top': `${top}px`,
+          '--screen-bottom': `${bottom}px`,
+        } as React.CSSProperties
+      }
+    >
+      {children}
+    </Tag>
+  )
+}
+
 /* ── Eyebrow — the workhorse label of this design ─────────────────────────
    11px / 0.14em / uppercase / #918879, or ochre when the section deserves
    emphasis (The idea, Connections, Resurfaced, Ask answer).                  */
@@ -201,20 +239,6 @@ export function Toggle({
 
 /* ── Buttons ─────────────────────────────────────────────────────────────── */
 
-export function DarkButton({
-  children,
-  className = '',
-  ...rest
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
-  return (
-    <button
-      {...rest}
-      className={`rounded-[10px] bg-ink px-[22px] py-[11px] font-sans text-[14.5px] font-medium text-on-dark transition-colors duration-[180ms] hover:bg-dark-hover disabled:cursor-not-allowed ${className}`}
-    >
-      {children}
-    </button>
-  )
-}
 
 export function OutlineButton({
   children,
@@ -236,18 +260,3 @@ export function OutlineButton({
   )
 }
 
-/** The ochre inline text link, underlined in ochre-line-soft. */
-export function TextLink({
-  children,
-  className = '',
-  ...rest
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
-  return (
-    <button
-      {...rest}
-      className={`font-sans text-[13.5px] font-medium text-ochre underline decoration-ochre-line-soft underline-offset-[3px] transition-colors duration-[160ms] hover:text-ochre-deep ${className}`}
-    >
-      {children}
-    </button>
-  )
-}

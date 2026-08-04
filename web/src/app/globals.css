@@ -101,6 +101,26 @@
 /* Prose blocks and titles wrap for shape, not merely for fit. */
 .pretty { text-wrap: pretty }
 
+/* ────────────────────────────────────────────────────────────────────────────
+   Screen container.
+   Every screen shares the same reading gutter and clears the same chrome, so
+   the offsets live here rather than being recomputed per screen. Between 768
+   and 1023px the sidebar becomes a fixed top bar, so every screen shifts down
+   by its height; below 768px the bottom tab bar is cleared by --screen-bottom.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+.cp-screen {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(24px, 4vw, 56px);
+  padding-top: var(--screen-top);
+  padding-bottom: var(--screen-bottom);
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .cp-screen { padding-top: calc(var(--screen-top) + 52px) }
+}
+
 @layer base {
   :root { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }
 

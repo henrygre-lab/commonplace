@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import { Avatar, Eyebrow } from '@/components/primitives'
+import { Avatar, Eyebrow, Screen } from '@/components/primitives'
 import { ASK_SUGGESTIONS, resolveAsk, type Answer } from '@/lib/ask'
 import { claimFocus, type FocusTarget } from '@/lib/focusIntent'
 import { useStore } from '@/lib/store'
@@ -75,10 +75,7 @@ function AskBody({ seed, autoRun }: { seed: string; autoRun: boolean }) {
   const sources = answer ? answer.ids.map((id) => items.find((x) => x.id === id)).filter(Boolean) : []
 
   return (
-    <div
-      className="cp-fade mx-auto w-full max-w-[680px] pb-[110px] pt-16 md:pt-[116px] lg:pt-16"
-      style={{ paddingLeft: 'clamp(24px,4vw,56px)', paddingRight: 'clamp(24px,4vw,56px)' }}
-    >
+    <Screen maxWidth={680} top={64} bottom={110}>
       <Eyebrow className="mb-[14px] block">Ask your library</Eyebrow>
       <h1
         className="pretty mb-[26px] font-serif text-ink"
@@ -177,6 +174,6 @@ function AskBody({ seed, autoRun }: { seed: string; autoRun: boolean }) {
           </p>
         </div>
       )}
-    </div>
+    </Screen>
   )
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import { Screen } from '@/components/primitives'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCounts, useStore } from '@/lib/store'
@@ -14,10 +15,7 @@ export function Archive() {
   const current = briefs[0]?.no
 
   return (
-    <div
-      className="mx-auto w-full max-w-[900px] pb-[100px] pt-[52px] md:pt-[104px] lg:pt-[52px]"
-      style={{ paddingLeft: 'clamp(24px,4vw,56px)', paddingRight: 'clamp(24px,4vw,56px)' }}
-    >
+    <Screen maxWidth={900} top={52} bottom={100}>
       <h1 className="mb-2 font-serif text-[38px] text-ink" style={{ letterSpacing: '-0.022em' }}>
         Past briefs
       </h1>
@@ -76,6 +74,6 @@ export function Archive() {
       <p className="mt-[34px] font-sans text-[12.5px] text-fainter">
         Briefs older than ninety days are summarised into your monthly digest.
       </p>
-    </div>
+    </Screen>
   )
 }

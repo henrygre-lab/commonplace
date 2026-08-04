@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { Avatar, Eyebrow, OutlineButton, Segmented, Toggle } from '@/components/primitives'
+import { Avatar, Eyebrow, OutlineButton, Screen, Segmented, Toggle } from '@/components/primitives'
 import { exportMarkdown } from '@/lib/export'
 import { useCounts, useStore } from '@/lib/store'
 import type { Settings as SettingsT } from '@/lib/types'
@@ -22,10 +22,7 @@ export function Settings() {
   const counts = useCounts()
 
   return (
-    <div
-      className="cp-fade mx-auto w-full max-w-[720px] pb-[110px] pt-[52px] md:pt-[104px] lg:pt-[52px]"
-      style={{ paddingLeft: 'clamp(24px,4vw,56px)', paddingRight: 'clamp(24px,4vw,56px)' }}
-    >
+    <Screen maxWidth={720} top={52} bottom={110}>
       <h1 className="mb-10 font-serif text-[38px] text-ink" style={{ letterSpacing: '-0.022em' }}>
         Settings
       </h1>
@@ -115,7 +112,7 @@ export function Settings() {
           <OutlineButton onClick={() => router.push('/')}>Replay</OutlineButton>
         </Row>
       </section>
-    </div>
+    </Screen>
   )
 }
 

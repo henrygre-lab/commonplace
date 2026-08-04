@@ -7,7 +7,7 @@
 // rules from the design spec, and that the web and iOS apps really do ship
 // identical content, which is the one property a monorepo exists to protect.
 
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { repoRoot } from './lib/prototype.mjs'
 
@@ -44,6 +44,27 @@ if (!same(web.briefs, ios.briefs)) fail('web and iOS briefs differ')
 if (!same(web.relations, ios.relations)) fail('web and iOS relations differ')
 if (!same(web.askCorpus, ios.askCorpus)) fail('web and iOS Ask answers differ')
 if (!failures) pass('web and iOS ship byte-identical content')
+
+// ── Android must read that same file, not ship a third copy ────────────────
+//
+// The Android app has no seed of its own: Gradle adds the iOS resources folder
+// as an asset source, so the two platforms cannot drift. That makes this a
+// structural guarantee rather than a comparison — the only thing worth checking
+// is that the wiring is still there.
+
+const gradleFile = resolve(repoRoot, 'android/app/build.gradle.kts')
+if (existsSync(gradleFile)) {
+  const kts = readFileSync(gradleFile, 'utf8')
+  const wired = /assets\.srcDir\(\s*["']\.\.\/\.\.\/ios\/Commonplace\/Resources["']\s*\)/.test(kts)
+  if (!wired) {
+    fail('android/app/build.gradle.kts no longer points assets at ios/Commonplace/Resources')
+  }
+  const stray = 'android/app/src/main/assets/Seed.json'
+  if (existsSync(resolve(repoRoot, stray))) {
+    fail(`${stray} exists — there must be exactly one Seed.json in the repository`)
+  }
+  if (wired) pass('android reads the same Seed.json — no third copy')
+}
 
 // ── Content rules ──────────────────────────────────────────────────────────
 

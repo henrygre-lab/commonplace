@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      The only two colours that must exist as Android resources, because the
+      window background is painted before any Compose content exists. Every
+      other colour in the product lives in design/Palette.kt — one source, named.
+    -->
+    <color name="ground">#F5F1E9</color>
+    <color name="ground_sunk">#EFEADD</color>
+</resources>

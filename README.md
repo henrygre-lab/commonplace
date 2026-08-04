@@ -12,12 +12,13 @@ the product's job is retrieval, not storage.
 No sign-in required. The landing page is the pitch; **"See it with sample data"**
 opens the whole product on the seeded library.
 
-Two implementations of the same design live here.
+Three implementations of the same design live here.
 
 | | | |
 |---|---|---|
 | [`web/`](web) | **Next.js 16, React 19, Tailwind v4** | The real one. Connects an X account, summarises, sends briefs. [Live on Vercel](https://commonplace-livid.vercel.app). |
 | [`ios/`](ios) | **SwiftUI, iOS 17+** | A portfolio build. No backend, bundled data, made to be screenshotted and screen-recorded. |
+| [`android/`](android) | **Kotlin, Jetpack Compose** | The same portfolio build for Android. No backend, the same bundled data, the same screens. |
 
 <p align="center">
   <img src="ios/Screenshots/01-brief-headline.png" width="24%" alt="The daily brief">
@@ -45,11 +46,15 @@ cd web && npm install && npm run dev
 
 # iOS — needs Xcode 16+ and xcodegen (brew install xcodegen)
 cd ios && xcodegen generate && open Commonplace.xcodeproj
+
+# Android — needs a JDK and the SDK; no Android Studio required
+cd android && ./gradlew assembleDebug
 ```
 
-Per-app detail lives in [`web/README.md`](web/README.md) and
-[`ios/README.md`](ios/README.md). Read those before changing either app — each
-has a "things that will bite you" section, and they are not the same list.
+Per-app detail lives in [`web/README.md`](web/README.md),
+[`ios/README.md`](ios/README.md) and [`android/README.md`](android/README.md).
+Read those before changing an app — each has a "things that will bite you"
+section, and they are not the same list.
 
 ## The design rules
 
@@ -77,42 +82,47 @@ caught up! 🎉"*.
 
 ## The one thing that surprises people
 
-**The two apps report numbers differently, on purpose.**
+**The apps report numbers differently, on purpose.**
 
 The web app shows **real counts** derived from the corpus — 12 ideas, 8
-unreviewed. The iOS app shows **fixed display constants** — 1,284 ideas, 142
-briefs, 89 unreviewed — because a portfolio build has to look like a product in
-real use, not a demo with twelve rows in it.
+unreviewed. The two portfolio builds show **fixed display constants** — 1,284
+ideas, 142 briefs, 89 unreviewed — because a portfolio build has to look like a
+product in real use, not a demo with twelve rows in it.
 
-So a hard-coded total is a bug in `web/` and correct in `ios/`. Both READMEs say
-so at the top of their gotchas.
+So a hard-coded total is a bug in `web/` and correct in `ios/` and `android/`.
+All three READMEs say so at the top of their gotchas.
 
 ## Content and the design bundle
 
 The 12 bookmarks, 6 briefs, connection graph and Ask answers are **written
-content, not filler**. They are generated into both apps from a single source by
-the scripts in [`tools/`](tools):
+content, not filler**. They are generated from a single source by the scripts in
+[`tools/`](tools):
 
 ```bash
 node tools/extract-web-seed.mjs   # → web/src/lib/seed.ts
 node tools/extract-ios-seed.mjs   # → ios/Commonplace/Resources/Seed.json
-node tools/check-content.mjs      # verifies both, needs no bundle
+node tools/check-content.mjs      # verifies everything, needs no bundle
 ```
+
+There is no third script for Android, because there is no third seed: Gradle adds
+the iPhone app's resources folder as an asset source, so both portfolio builds
+package the *same* `Seed.json` and cannot drift.
 
 `check-content.mjs` is the interesting one. It asserts the content rules — that a
 brief labelled "Two decision rules" really has two items, that every
 cross-reference resolves, that no connection is labelled the useless "Related"
 (*"Argues the opposite"* is the feature) — and that **the web and iOS seeds are
-byte-identical**. Keeping both platforms provably in sync is the reason these
-apps share a repository.
+byte-identical**, and that Android is still wired to share the iOS one rather
+than having quietly forked it. Keeping the platforms provably in sync is the
+reason these apps share a repository.
 
 > **Note.** The design specification and the HTML prototype the seed is extracted
 > from are the brief this was built against and are **not included here**. The
-> generated seed files are committed, so both apps build from a clean clone; you
+> generated seed files are committed, so every app builds from a clean clone; you
 > only need the bundle to re-run the two extract scripts.
 
 ## Licence
 
 Code is [MIT](LICENSE). The bundled Newsreader and Instrument Sans fonts are SIL
-OFL 1.1, with their licences in `ios/Commonplace/Design/Fonts/`. The design
-itself is not covered — see [LICENSE](LICENSE).
+OFL 1.1, with their licences in `ios/Commonplace/Design/Fonts/` and
+`android/licenses/`. The design itself is not covered — see [LICENSE](LICENSE).

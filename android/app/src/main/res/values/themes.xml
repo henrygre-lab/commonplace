@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Light only, and forced.
+
+      There is no DayNight parent, no values-night/ directory, and force-dark is
+      disabled explicitly because several OEM skins (Samsung, OnePlus) will
+      otherwise invert an app that never opted in. This palette is warm paper; a
+      dark inversion is a different design and out of scope — the same decision
+      the iPhone app makes with UIUserInterfaceStyle = Light.
+
+      The framework Material theme is used only as a parent for window plumbing.
+      Nothing in the app draws Material chrome: system bar appearance is set in
+      MainActivity, and every screen is built from Compose foundation.
+    -->
+    <style name="Theme.Commonplace" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowBackground">@color/ground</item>
+    </style>
+
+</resources>

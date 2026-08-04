@@ -1,7 +1,7 @@
 # Commonplace — iPhone app (portfolio)
 
 The SwiftUI build — start at the [root README](../README.md) for what
-Commonplace is and the rules both apps share.
+Commonplace is and the rules all three apps share.
 
 **This app never talks to a server.** It ships the seed bundled, every
 interaction works, and it exists to be screenshotted and screen-recorded.

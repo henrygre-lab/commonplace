@@ -1,7 +1,7 @@
 # Commonplace — web app
 
 The live implementation — start at the [root README](../README.md) for what
-Commonplace is and the rules both apps share.
+Commonplace is and the rules all three apps share.
 
 **Deployed: https://commonplace-livid.vercel.app**
 

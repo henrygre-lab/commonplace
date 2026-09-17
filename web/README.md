@@ -13,9 +13,9 @@ npm run lint
 
 Vercel builds from this subdirectory — the project's **Root Directory** is set to
 `web`, since the repository root holds both apps and has no `package.json`.
-Pushes to `main` deploy automatically. No environment variables are required:
-`DATABASE_URL` is read only inside `db()` in `src/lib/db/index.ts`, and nothing
-calls it yet.
+Pushes to `main` deploy automatically. The demo path needs no environment
+variables — every screen renders from the seed — but sign-in and `/api/sync`
+do. `.env.example` lists them and says what each one guards.
 
 ## Where this stands
 
@@ -28,9 +28,22 @@ the opposite: it shows fixed display constants (`1,284`, `142`, `89`) so it look
 like a product in real use. Here, `useCounts()` in `src/lib/store.tsx` derives
 everything. If you see a hard-coded total in this app, it is a bug.
 
-Not yet done: the ingest is not wired to a running database, and the later
-phases (AI extraction, generated briefs, connections, live X sync) are untouched
-by design — Phase 1 ships on a real URL first.
+Not yet done: the screens still read from the seed rather than from Postgres,
+and Phases 2–4 (AI extraction, generated briefs, connections) are untouched by
+design — Phase 1 ships on a real URL first.
+
+**Phase 5 landed early, out of order.** `03-react-web-app.md` defers live X
+sync on the assumption that bookmarks sit behind a ~$200/month tier. They do
+not: they are Owned Reads at $0.001 per resource, so a ~1,300-bookmark backfill
+is roughly $1.28, and the barrier was always scope rather than cost. So real X
+OAuth and a spend-guarded `POST /api/sync` are wired up now — allowlisted to a
+single X user id, because a public deployment with an open sync route bills
+whoever deployed it. The schema is pushed and the tables exist.
+
+Two things to know before trusting that: sign-in at the production alias fails
+with `?error=Configuration` *after* the X authorize screen, unresolved; and
+`/api/sync` has never been run, so nothing has been billed and no bookmark row
+has ever been written.
 
 ## Layout
 
@@ -81,12 +94,15 @@ library updates it inside the brief. Keep it that way.
 1. `DATABASE_URL=…` (Neon or Supabase), then `npx drizzle-kit push`.
 2. Ingest via `archiveImportSource` — zero API cost, full history, no rate
    limits. This is the Phase 1 source and a permanent fallback.
-3. Replace the seed arrays in `lib/store.tsx` with queries. No screen changes:
-   the store already exposes a repository-shaped interface.
+3. Replace the seed arrays in `lib/store.tsx` with queries. Budget for this:
+   the store is client state keyed by `number` (`types.ts`) while the schema
+   keys by `uuid` (`db/schema.ts`), so it is a conversion, not a swap. It is
+   the bulk of the remaining work — more than auth or ingest were.
 
-`lib/sources/x-api.ts` is written but should not be used until Phase 5 — bookmark
-reads count toward the monthly post cap, and tiers move. Verify quotas in the X
-developer console first.
+`lib/sources/x-api.ts` is no longer dormant — `POST /api/sync` calls it. It is
+the one source that costs money, so it stays behind the allowlist and the
+`SYNC_MAX_PAGES` cap. `archiveImportSource` remains the zero-cost path and the
+permanent fallback.
 
 ## Demo mode
 
